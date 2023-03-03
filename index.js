@@ -6,9 +6,8 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-readline.question('Please specify the file to convert to HTML.', path => {
-    var fileProcessor = new FileProcessor(path);
-    var textProcessor = new TextProcessor(fileProcessor);
-    textProcessor.convertText();
-    readline.close();
-});
+var path = 'data.txt';
+
+var fileProcessor = new FileProcessor(path);
+var textProcessor = new TextProcessor(fileProcessor);
+textProcessor.convertText();
